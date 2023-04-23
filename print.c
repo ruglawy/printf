@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * _printf - printf() replica
  * @format: string to be printed
@@ -9,10 +8,8 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	char *str;
 	char ch[1];
-	int length = 0;
-	int i = 0;
+	int i = 0, length = 0;
 
 	va_start(ap, format);
 	while (format[i] != '\0')
@@ -22,18 +19,17 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				case 'c':
-					ch[0] = va_arg(ap, int);
-					write(1, ch, 1);
-					length++;
+					length += caseC(va_arg(ap, int));
 					break;
 				case 's':
-					str = va_arg(ap, char*);
-					write(1, str, strlen(str));
-					length += (int)strlen(str);
+					length += caseS(va_arg(ap, char*));
 					break;
 				case '%':
-					write(1, "%", 1);
-					length++;
+					length += casePercentage();
+					break;
+				case 'd':
+				case 'i':
+					length += caseD(va_arg(ap, int));
 					break;
 				default:
 					exit(98);
