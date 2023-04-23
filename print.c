@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 					length += caseC(va_arg(ap, int));
 					break;
 				case 's':
+				case 'S':
 					length += caseS(va_arg(ap, char*));
 					break;
 				case '%':
