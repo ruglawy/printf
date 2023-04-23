@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 					write(1, "%", 1);
 					length++;
 				default:
-					return;
+					exit(98);
 					break;
 			}
 			i++;
