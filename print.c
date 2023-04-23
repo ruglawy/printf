@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 					length++;
 					break;
 				default:
+					exit(98);
 					break;
 			}
 			i++;
