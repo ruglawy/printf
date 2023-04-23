@@ -34,8 +34,8 @@ int _printf(const char *format, ...)
 				case '%':
 					write(1, "%", 1);
 					length++;
+					break;
 				default:
-					return (0);
 					break;
 			}
 			i++;
