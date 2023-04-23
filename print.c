@@ -31,6 +31,9 @@ int _printf(const char *format, ...)
 				case 'i':
 					length += caseD(va_arg(ap, int));
 					break;
+				case 'r':
+					length += caseR(va_arg(ap, char*));
+					break;
 				default:
 					exit(98);
 					break;

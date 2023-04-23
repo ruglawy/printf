@@ -15,4 +15,5 @@ int caseS(const char *string);
 int caseC(int ch);
 int casePercentage();
 int caseD(int num);
+int caseR(const char *string);
 #endif

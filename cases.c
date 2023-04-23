@@ -67,5 +67,28 @@ int caseD(int num)
 	}
 	string[length] = '\0';
 	write(1, string, strlen(string));
+	free(string);
 	return (length + negativeFlag);
+}
+/**
+ * caseR - prints reversed string
+ * @string - string
+ *
+ * Return: length
+ */
+int caseR(const char *string)
+{
+	int i, length = (int)strlen(string);
+	int j = length - 1;
+	char *reverse = malloc(sizeof(char) * (length + 1));
+
+	for (i = 0; i < length; i++)
+	{
+		reverse[i] = string[j];
+		j--;
+	}
+	reverse[length] = '\0';
+	write(1, reverse, length);
+	free(reverse);
+	return (length);
 }
