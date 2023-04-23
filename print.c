@@ -31,6 +31,9 @@ int _printf(const char *format, ...)
 					write(1, str, strlen(str));
 					length += (int)strlen(str);
 					break;
+				case '%':
+					write(1, "%", 1);
+					length++;
 				default:
 					break;
 			}
