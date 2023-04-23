@@ -7,6 +7,11 @@
  */
 int caseS(const char *string)
 {
+	if (string == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	write(1, string, (int)strlen(string));
 	return ((int)strlen(string));
 }
@@ -20,6 +25,11 @@ int caseC(int ch)
 {
 	char character[1];
 
+	if (ch == NULL)
+	{
+		write(1, " ", 1);
+		return (1);
+	}
 	character[0] = ch;
 	write(1, character, 1);
 	return (1);
@@ -45,6 +55,11 @@ int caseD(int num)
 	char *string;
 	int length = 0, i, remainder, number = num, negativeFlag = 0;
 
+	if (num == NULL)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 	if (num < 0)
 	{
 		write(1, "-", 1);
@@ -58,6 +73,12 @@ int caseD(int num)
 	}
 
 	string = malloc(sizeof(char) * (length + 1));
+
+	if (string == NULL)
+	{
+		free(string);
+		exit(98);
+	}
 
 	for (i = 0; i < length; i++)
 	{
