@@ -12,10 +12,9 @@ int caseR(const char *string)
 
 	if (string == NULL)
 	{
-		write(1, "(null)", 6);
+		write_data(1, "(null)", 6);
 		return (6);
 	}
-
 	length = (int)strlen(string);
 	j = length - 1;
 	reverse = malloc(sizeof(char) * (length + 1));
@@ -30,7 +29,7 @@ int caseR(const char *string)
 		j--;
 	}
 	reverse[length] = '\0';
-	write(1, reverse, length);
+	write_data(1, reverse, length);
 	free(reverse);
 	return (length);
 }
