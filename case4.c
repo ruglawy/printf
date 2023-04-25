@@ -12,7 +12,7 @@ int caseR(const char *string)
 
 	if (string == NULL)
 	{
-		write_data(1, "(null)", 6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	length = (int)strlen(string);
@@ -29,7 +29,7 @@ int caseR(const char *string)
 		j--;
 	}
 	reverse[length] = '\0';
-	write_data(1, reverse, length);
+	write(1, reverse, length);
 	free(reverse);
 	return (length);
 }

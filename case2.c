@@ -37,7 +37,7 @@ int caseU(int num)
 		string[length - (i + 1)] = remainder + '0';
 	}
 	string[length] = '\0';
-	write_data(1, string, strlen(string));
+	write(1, string, strlen(string));
 	free(string);
 	return (length + negativeFlag);
 }

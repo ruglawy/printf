@@ -9,7 +9,7 @@ int caseS(const char *string)
 {
 	if (string == NULL)
 	{
-		write_data(1, "(null)", 6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	write(1, string, (int)strlen(string));
@@ -26,6 +26,6 @@ int caseC(int ch)
 	char character[1];
 
 	character[0] = ch;
-	write_data(1, character, 1);
+	write(1, character, 1);
 	return (1);
 }

@@ -12,7 +12,7 @@ int caseD(int num)
 
 	if (num < 0)
 	{
-		write_data(1, "-", 1);
+		write(1, "-", 1);
 		negativeFlag = 1;
 		num *= -1;
 	}
@@ -34,7 +34,7 @@ int caseD(int num)
 		string[length - (i + 1)] = remainder + '0';
 	}
 	string[length] = '\0';
-	write_data(1, string, strlen(string));
+	write(1, string, strlen(string));
 	free(string);
 	return (length + negativeFlag);
 }
