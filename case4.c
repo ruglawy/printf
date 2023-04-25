@@ -15,6 +15,7 @@ int caseR(const char *string)
 		write(1, "(null)", 6);
 		return (6);
 	}
+
 	length = (int)strlen(string);
 	j = length - 1;
 	reverse = malloc(sizeof(char) * (length + 1));

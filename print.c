@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	char ch[1];
 	int i = 0, length = 0;
-	
+
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
@@ -27,12 +27,6 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					length += casePercentage();
-					break;
-				case 'b':
-					length += int_to_binary(va_arg(ap, int));
-					break;
-				case 'u':
-					length += caseU(va_arg(ap, int));
 					break;
 				case 'd':
 				case 'i':

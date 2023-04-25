@@ -12,9 +12,6 @@ int caseS(const char *string);
 int caseC(int ch);
 int casePercentage();
 int caseD(int num);
-int caseU(int num);
-int int_to_binary(int num);
 void write_data();
 int caseR(const char *string);
 #endif
-
